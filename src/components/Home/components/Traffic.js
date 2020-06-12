@@ -1,5 +1,7 @@
 import React from 'react'
 
+import {ReactComponent as LinkIcon} from "../../../assets/icons/mdi_link.svg";
+
 const visitsData = [
   {
     pageName : '/store/',
@@ -67,7 +69,7 @@ const Traffic = () => {
               {
                 visitsData.map((data, index)=>(
                   <tr key={index}>
-                    <td>{data.pageName}</td>
+                    <td>{data.pageName} <a href="https://google.com"><LinkIcon/></a></td>
                     <td>{data.visitors}</td>
                     <td>{data.uniquePageVisits}</td>
                     <td>{data.bounceRate}</td>

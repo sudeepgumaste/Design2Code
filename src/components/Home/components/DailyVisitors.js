@@ -10,7 +10,7 @@ const DailyVisitors = () => {
     datasets : [
       {
         data : [12,13,15,12,16,17,14,17,12,13,15,12,16,17,14,17,12,13,15,12,16,17,14,17,12,13,15,12,16, 12],
-        backgroundColor : 'rgba(21,101,216,1)'
+        backgroundColor : 'rgba(21,101,216,1)',
       }
     ],
   }
@@ -36,7 +36,7 @@ const DailyVisitors = () => {
           ticks: {
             stepSize : 1,
             min : 0,
-            max: 18,
+            max: 20,
             beginAtZero: true
           }
         }
