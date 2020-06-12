@@ -1,4 +1,6 @@
 .main-body{
   flex: 1;
   background: $body-secondary;
+  position: relative;
+  overflow: auto;
 }

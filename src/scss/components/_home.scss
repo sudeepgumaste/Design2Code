@@ -1,10 +1,10 @@
 .home{
+  position: absolute;
+  top: 63px;
+  left: 0px;
   width: 100%;
   overflow: auto;
   padding: 30px;
-  height: 1080px;
-  .wrapper{
-  }
   
   &__daily-visitors{
     border-radius: 4px;
