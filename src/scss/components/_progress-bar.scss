@@ -1,0 +1,13 @@
+.progress-bar{
+  height: 4px;
+  background: $grey;
+  border-radius: 2px;
+  overflow: hidden;
+  margin-left:auto;
+
+  &__completed{
+    border-radius: 2px;
+    height: 4px;
+    background: $blue;
+  }
+}

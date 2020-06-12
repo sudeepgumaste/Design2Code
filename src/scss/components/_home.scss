@@ -149,9 +149,11 @@
             border-bottom: 1px solid $grey;
           }
           td{
-            &:first-child{
+            &.flex{
               display: flex;
               align-items: center;
+            }
+            &:first-child{
               a{
                 margin-left: auto;
                 svg{
@@ -168,6 +170,7 @@
             }
           }
         }
+
       }
     }
   }

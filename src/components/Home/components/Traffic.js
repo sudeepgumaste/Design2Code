@@ -1,6 +1,7 @@
 import React from 'react'
 
 import {ReactComponent as LinkIcon} from "../../../assets/icons/mdi_link.svg";
+import ProgressBar from "../../ProgressBar";
 
 const visitsData = [
   {
@@ -29,16 +30,20 @@ const visitsData = [
 const socialData = [
   {
     network: 'Instagram',
-    visitors:'3,550'
+    visitors:'3,550',
+    percentage: 90
   },{
     network: 'Facebook',
-    visitors:'2,236'
+    visitors:'2,236',
+    percentage: 75
   },{
     network: 'Twitter',
-    visitors:'1,795'
+    visitors:'1,795',
+    percentage: 50
   },{
     network: 'LinkedIn',
-    visitors:'62'
+    visitors:'62',
+    percentage: 10
   },
 ]
 
@@ -69,7 +74,7 @@ const Traffic = () => {
               {
                 visitsData.map((data, index)=>(
                   <tr key={index}>
-                    <td>{data.pageName} <a href="https://google.com"><LinkIcon/></a></td>
+                    <td className="flex">{data.pageName} <a href="https://google.com"><LinkIcon/></a></td>
                     <td>{data.visitors}</td>
                     <td>{data.uniquePageVisits}</td>
                     <td>{data.bounceRate}</td>
@@ -94,16 +99,15 @@ const Traffic = () => {
                 Visitors
               </th>
             </thead>
-            <tbody className="home__traffic__table__body">
-              <tr>
-                <td>Instagram</td>
-                <td>3550</td>
-              </tr>
+            <tbody className="home__traffic__table__body home__traffic__table__body--social">
               {
                 socialData.map((data, index)=>(
                   <tr key={index}>
                     <td>{data.network}</td>
-                    <td>{data.visitors}</td>
+                    <td className="flex">
+                      {data.visitors}
+                      <ProgressBar barWidth="120px" completionPercent={`${data.percentage}%`}/>
+                    </td>
                   </tr>
                 ))
               }
