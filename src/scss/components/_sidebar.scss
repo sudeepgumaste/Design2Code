@@ -1,0 +1,200 @@
+.sidebar{
+  width : 270px;
+  height : 100vh;
+  background : $body-primary; 
+  border-right: 1px solid $grey;
+  overflow: auto;
+
+  &__header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid $grey;
+    padding: 19px;
+    position: sticky;
+    top: 0;
+    background: $body-primary;
+    z-index: 80000;
+
+    svg{
+      stroke: $text-secondary;
+    }
+  }
+
+  &__avatar{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    border-bottom: 1px solid $grey;
+    img{
+      border-radius: 50%;;
+    }
+
+    &__name{
+      margin-top: 20px;
+      align-items: center;
+      position: relative;
+
+      .active{
+        position: absolute;
+        top:50%;
+        transform: translateY(-50%);
+        margin-left: 4px;
+        height: 6px;
+        width: 6px;
+        border-radius: 3px;
+        background: $green;
+      }
+    }
+
+    &__position{
+      font-size: 14px;
+      color: $text-secondary;
+      margin-top : 8px
+    }
+  }
+
+  &__menu-section{
+    padding: 16px 30px;
+  }
+
+  &__collapsable-menu{
+    border-bottom: 1px solid $grey;
+    height : 50px;
+    overflow: hidden;
+    transition: height 300ms ease;
+
+    &.active{
+      height : 160px;
+    }
+
+    &__sub-menu{
+      p{
+        font-size: 14px;
+        padding-left: 40px;
+        margin-bottom: 20px;
+        color: $text-secondary;
+        &:hover{
+          color: $blue;
+          cursor : pointer;
+        }
+      }
+    }
+    
+    &__header{
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      padding: 14px 0;
+  
+      &__name{
+        font-size: 14px;
+        color: $text-primary;
+        margin-left: 13px;
+        margin-right: auto;
+      }
+  
+      svg{
+        transition: fill 300ms ease, transform 300ms ease;
+      }
+  
+      svg:nth-child(1){
+        fill: $text-secondary;
+      }
+  
+      &.active{
+        svg:nth-child(1){
+          fill: $blue;
+        }
+  
+        svg:nth-child(3){
+          transform: rotate(-180deg);
+          fill: $blue;
+        }
+      }
+      
+      svg:nth-child(3){
+        fill: $text-secondary;
+      }
+    }
+
+  }
+
+  &__menu{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 14px 0;
+    border-bottom: 1px solid $grey;
+
+    &__name{
+      font-size: 14px;
+      color: $text-primary;
+      margin-left: 13px;
+      margin-right: auto;
+    }
+
+    svg{
+      transition: fill 300ms ease, transform 300ms ease;
+    }
+
+    svg:nth-child(1){
+      fill: $text-secondary;
+    }
+
+    &.active, &:hover{
+      svg:nth-child(1){
+        fill: $blue;
+      }
+
+      svg:nth-child(3){
+        transform: rotate(-180deg);
+        fill: $blue;
+      }
+    }
+    
+    svg:nth-child(3){
+      fill: $text-secondary;
+    }
+
+  }
+
+  &__recents{
+    padding: 16px 30px;
+
+    &__header{
+      padding: 10px 0;
+      font-size: 14px;
+      color: $text-secondary;
+      margin-bottom: 10px;
+    }
+
+    &__links{
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      cursor: pointer;
+      p{
+        font-size: 14px;
+        color: $text-primary;
+        margin-right: auto;
+        transition: color 300ms ease;
+      }
+      svg{
+        fill : $text-secondary;
+        transition: fill 300ms ease;
+      }
+
+      &:hover{
+        p{
+          color: $blue;
+        }
+        svg{
+          fill : $blue;
+        }
+      }
+    }
+  }
+}

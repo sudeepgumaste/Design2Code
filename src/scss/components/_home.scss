@@ -1,0 +1,155 @@
+.home{
+  width: 100%;
+  overflow: auto;
+  padding: 30px;
+  height: 1080px;
+  .wrapper{
+  }
+  
+  &__daily-visitors{
+    border-radius: 4px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    background: $body-primary;
+    border: 1px solid $grey;
+    height: 336px;
+    &__header{
+      display: flex;
+      padding: 20px 30px;
+      color: $text-primary;
+      align-items: center;
+      border-bottom: 1px solid $grey;
+
+      p{
+        font-size: 16px;
+        font-weight: bold;
+        margin-right: auto;
+      }
+    }
+
+    &__body{
+      height: 262px;
+      padding: 30px;
+    }
+  }
+
+  &__statistics{
+    margin-top: 30px;
+    height: 240px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+
+    &__section{
+      padding: 30px;
+      background: $body-primary;
+      border: 1px solid $grey;
+      border-radius: 4px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      &__header{
+        font-size: 12px;
+        text-transform: uppercase;
+        color: $text-secondary;
+      }
+
+      &__counter{
+        margin-top : 16px;
+        font-size: 30px;
+      }
+
+      &__change{
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+
+        &.up{
+          color: $green;
+          svg{
+            fill: $green;
+          }
+        }
+
+        &.down{
+          color: $red;
+          svg{
+            fill: $red;
+          }
+        }
+
+        svg{
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+
+  &__traffic{
+    display: grid;
+    margin-top: 30px;
+    grid-template-columns: 7fr 3fr;
+    gap: 30px;
+    &__visited{
+      background: $body-primary;
+      border: 1px solid $grey;
+      border-radius: 4px;
+    }
+
+    &__social{
+      background: $body-primary;
+      border: 1px solid $grey;
+      border-radius: 4px;      
+    }
+
+    &__section{
+      &__header{
+        padding: 30px;
+        font-weight: bold;
+        font-size: 16px;
+        color: $text-primary;
+        border-bottom: 1px solid $grey;
+      }
+    }
+
+    &__table{
+      width: 100%;
+      border-collapse: collapse;
+      &__header{
+        text-align: left;
+        text-transform: uppercase;
+        color: $text-secondary;
+        font-size: 12px;
+        border-bottom: 1px solid $grey;
+        th{
+          padding: 16px;
+          &:first-child{
+            padding-left: 30px;
+          }
+          &:last-child{
+            padding-right: 30px;
+          }
+        }
+      }
+
+      &__body{
+        font-size: 14px;
+        color: $text-primary;
+        tr{
+          border-bottom: 1px solid $grey;
+          td{
+            padding: 16px;
+            &:first-child{
+              padding-left: 30px;
+            }
+            &:last-child{
+              padding-right: 30px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+}

@@ -1,0 +1,54 @@
+.select-menu__closer{
+  position: absolute;
+  top:0;
+  left:0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.select-menu{
+  padding: 6px 20px;
+  border: 1px solid $grey;
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+  position: relative;
+  cursor: pointer;
+
+  &__selected-option{
+    margin-right: auto;
+    font-size: 14px;
+    color: $text-secondary;
+  }
+  
+  svg{
+    fill: $text-secondary;
+    width: 8px;
+  }
+  
+  &__options{
+    z-index: 10000;
+    width: 100%;
+    position: absolute;
+    width: 102%;
+    top: 108%;
+    left: 0;
+    background: $body-primary;
+    border: 1px solid $grey;
+    border-radius: 4px;
+    max-height: 190px;
+    overflow: auto;
+    
+    &__option{
+      background: $body-primary;
+      font-size: 14px;
+      color: $text-secondary;
+      padding: 10px 20px;
+      cursor: pointer;
+      
+      &:hover{
+        background: darken($color: #fff, $amount: 5%);
+      }
+    }
+  }
+}
