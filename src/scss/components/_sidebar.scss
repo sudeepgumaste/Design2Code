@@ -4,6 +4,8 @@
   background : $body-primary; 
   border-right: 1px solid $grey;
   overflow: auto;
+  display: flex;
+  flex-direction: column;
 
   &__header{
     display: flex;
@@ -195,6 +197,19 @@
           fill : $blue;
         }
       }
+    }
+  }
+
+  &__credits{
+    display: flex;
+    margin-top: auto;
+    border-top: 1px solid $grey;
+    font-size: 13px;
+    padding: 30px;
+    color: $text-primary;
+    a{
+      color: $text-primary;
+      text-decoration: none;
     }
   }
 }

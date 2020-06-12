@@ -47,6 +47,9 @@ const Sidebar = () => {
           <RightArrow />
         </div>
       </div>
+      <div className="sidebar__credits">
+        Page: <a href="https://dribbble.com/janlosert">dribbble.com/janlosert</a>
+      </div>
     </div>
   )
 }
