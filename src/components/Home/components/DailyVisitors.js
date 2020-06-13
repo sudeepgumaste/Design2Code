@@ -34,11 +34,10 @@ const DailyVisitors = () => {
         {
           display: true,
           ticks: {
-            stepSize : 1,
+            stepSize : 6,
             min : 0,
-            max: 20,
+            max: 24,
             beginAtZero: true,
-            skip: 4,
           }
         }
       ]
