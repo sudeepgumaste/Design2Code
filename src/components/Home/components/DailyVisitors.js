@@ -26,23 +26,57 @@ const DailyVisitors = () => {
     scales:{
       xAxes:[
         {
-          display: true,
+          display: false,
           barPercentage: 0.5
         }
       ],
       yAxes:[
         {
-          display: false,
+          display: true,
           ticks: {
             stepSize : 1,
             min : 0,
             max: 20,
-            beginAtZero: true
+            beginAtZero: true,
+            skip: 4,
           }
         }
       ]
+    },
+    tooltips: {
+      callbacks: {
+        title: function(tooltipItem, data) {
+          let suffix = 'TH';
+          const date = data['labels'][tooltipItem[0]['index']];
+          if(date[date.length-1] === '1'){
+            suffix = 'ST'
+          }else if(date[date.length-1] === '2'){
+            suffix = 'ND'
+          }else if(date[date.length-1] === '3'){
+            suffix = 'RD'
+          }
+          return `${date}${suffix} JANUARY 2018`;
+        },
+        label: function(tooltipItem, data) {
+          return `Visitors ${data['datasets'][0]['data'][tooltipItem['index']]} k`;
+        },
+        afterLabel: function(tooltipItem, data) {
+          
+        }
+      },
+      backgroundColor: '#FFF',
+      xPadding:15,
+      yPadding:15,
+      borderWidth: 1,
+      borderColor:"#EAEDF4",
+      titleFontSize: 12,
+      titleFontColor: '#9FA0A5',
+      titleFontStyle: 'regular',
+      bodyFontColor: '#000',
+      bodyFontSize: 12,
+      titleFontFamily : 'Roboto',
+      bodyFontFamily : 'Roboto',
     }
-
   }
 
   return (

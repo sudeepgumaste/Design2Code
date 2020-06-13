@@ -11,8 +11,9 @@ const Statistics = () => {
     datasets : [
       {
         data : [12,13,15,12,15,15,14,15,12,13,15],
-        backgroundColor : 'rgba(51,170,70,0.5)',
+        backgroundColor : 'rgba(51,170,70,0.1)',
         borderColor : 'rgba(51,170,70,1)',
+        borderWidth: 2,
       }
     ],
   }
@@ -22,15 +23,19 @@ const Statistics = () => {
     datasets : [
       {
         data : [12,13,15,12,15,15,14,15,12,13,15,12,13,],
-        backgroundColor : 'rgba(21,101,216,0.5)',
+        backgroundColor : 'rgba(21,101,216,0.1)',
         borderColor : 'rgba(21,101,216,1)',
+        borderWidth: 2,
       }
     ],
   }
 
   const options = {
-    bezierCurve: false,
+    lineTension: 0,
     maintainAspectRatio: false,
+    tooltip:{
+      display : false
+    },
     elements: {
       point:{
           radius: 0

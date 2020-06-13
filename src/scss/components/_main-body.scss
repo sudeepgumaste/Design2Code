@@ -2,5 +2,6 @@
   flex: 1;
   background: $body-secondary;
   position: relative;
-  overflow: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
